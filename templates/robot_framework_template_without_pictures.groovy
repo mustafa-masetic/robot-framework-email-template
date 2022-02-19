@@ -244,8 +244,8 @@ import java.text.SimpleDateFormat
                 <td style="color: #66CC00">PASS</td>
                 <% } %>
                 <% if(tc.isSkipped()){ %>
-                <td style="color: #FFFF01">SKIP</td>
-                <% } %>
+                <td style="color: #C7CD05">SKIP</td>
+                <% return} %>
                 <% if(!tc.isPassed()){ %>
                 <td style="color: #FF3333">FAIL</td>
                 <% } %>
