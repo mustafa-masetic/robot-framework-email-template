@@ -29,7 +29,7 @@ agent any
         }
 
         success {
-                emailext body: '''${SCRIPT, template="$WORKSPACE/templates/robot_framework_template_with_pictures.groovy"}''',
+                emailext body: '''${SCRIPT, template="./templates/robot_framework_template_with_pictures.groovy"}''',
                 mimeType: 'text/html',
                 subject: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 to: 'mmasetic@live.com'
