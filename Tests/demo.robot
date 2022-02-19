@@ -7,4 +7,6 @@ Demo Test 2
     Log to console   Hello from Robot Framework in Test 2
 
 Demo Test 3
-    Log to console   This test is not failing anymore
+    Demo Test 3
+    Log to console   This test is failing again
+    Non existing keyword
