@@ -23,9 +23,23 @@ agent any
                         passThreshold             : 100,
                         unstableThreshold         : 95.0,
                         otherFiles                : "*.png"
-                        ]
-                    )
-                }
+                    ]
+                )
             }
         }
+
+        success {
+                emailext body: '''${SCRIPT, template="email-template.groovy"}''',
+                mimeType: 'text/html',
+                subject: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                to: 'mmasetic@live.com'
+        }
+		
+        failure {
+                emailext body: '''${SCRIPT, template="email-template.groovy"}''',
+                mimeType: 'text/html',
+                subject: "FAIL: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                to: 'mmasetic@live.com'
+        }
+    }
 }
