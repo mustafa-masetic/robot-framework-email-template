@@ -239,7 +239,7 @@ import java.text.SimpleDateFormat
             <tr>
                 <td><a href="${rooturl}${build.url}robot/report/log.html#s1-s1-t<%= i%>"><%= tc.displayName %></a></td>
                 <% i = i + 1 %>
-                <td style="color: <%= tc.isPassed() ? "#66CC00" : color: <%= tc.isFailed() ?"#FF3333" : "##FFFF01" %>"><%= tc.isPassed() ? "PASS" : tc.isFailed() ? "FAIL" : "SKIPPED" %>
+                <td style="color: <%= tc.isPassed() ? "#66CC00" : <%= tc.isFailed() ? "#FF3333" : "##FFFF01" %>"><%= tc.isPassed() ? "PASS" : tc.isFailed() ? "FAIL" : "SKIPPED" %>
                 </td>
                 <td><%      if ( tc.errorMsg == null ) {
                         tc.errorMsg=""
