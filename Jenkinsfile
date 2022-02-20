@@ -32,14 +32,14 @@ agent any
                 emailext body: '''${SCRIPT, template="./templates/robot_framework_template.groovy"}''',
                 mimeType: 'text/html',
                 subject: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                to: 'mmasetic@live.com'
+                to: 'EMAIL'
         }
 		
         failure {
                 emailext body: '''${SCRIPT, template="./templates/robot_framework_template.groovy"}''',
                 mimeType: 'text/html',
                 subject: "FAIL: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                to: 'mmasetic@live.com'
+                to: 'EMAIL'
         }
     }
 }
