@@ -245,6 +245,10 @@ import java.text.SimpleDateFormat
                 <% } %>
                 <% if(tc.isSkipped()){ %>
                 <td style="color: #C7CD05">SKIP</td>
+                <% if ( tc.errorMsg == null ) {tc.errorMsg=""}%>
+                <td><%= tc.errorMsg %></td>
+                <td><%= execDate %></td>
+                <td>${tc.humanReadableDuration}</td>
                 <% return} %>
                 <% if(!tc.isPassed()){ %>
                 <td style="color: #FF3333">FAIL</td>
