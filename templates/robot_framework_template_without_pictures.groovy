@@ -241,17 +241,17 @@ import java.text.SimpleDateFormat
                 <% i = i + 1 %>
 
                 <% if(tc.isPassed()){ %>
-                <td style="color: #66CC00">PASS</td>
+                <td style="ont-weight:bold; color: #66CC00">PASS</td>
                 <% } %>
                 <% if(tc.isSkipped()){ %>
-                <td style="color: #C7CD05">SKIP</td>
+                <td style="ont-weight:bold; color: #C7CD05">SKIP</td>
                 <% if ( tc.errorMsg == null ) {tc.errorMsg=""}%>
                 <td><%= tc.errorMsg %></td>
                 <td><%= execDate %></td>
                 <td>${tc.humanReadableDuration}</td>
                 <% return} %>
                 <% if(!tc.isPassed()){ %>
-                <td style="color: #FF3333">FAIL</td>
+                <td style="ont-weight:bold; color: #FF3333">FAIL</td>
                 <% } %>
                 <td><%      if ( tc.errorMsg == null ) {
                         tc.errorMsg=""
