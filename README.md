@@ -12,4 +12,4 @@ Email templates can be referenced directly from repo. In this case they need to 
 To use template in other jobs without having them in repo and approving simply copy template to $JENKINS_HOME/email-templates
 
 ## Blog post
-URL: https://medium.com/@mmasetic/jenkins-email-template-for-robot-framework-results-116e41be3af0
+URL: https://mmasetic.medium.com/jenkins-email-template-for-robot-framework-results-116e41be3af0
